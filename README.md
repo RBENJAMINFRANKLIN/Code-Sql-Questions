@@ -6,6 +6,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Database
 |  |
 | ------- |
+| [0196-delete-duplicate-emails](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/0196-delete-duplicate-emails) |
 | [0620-not-boring-movies](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/0620-not-boring-movies) |
 | [1390-average-selling-price](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/1390-average-selling-price) |
 | [1670-patients-with-a-condition](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/1670-patients-with-a-condition) |
