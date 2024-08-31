@@ -20,5 +20,6 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1773-percentage-of-users-attended-a-contest](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/1773-percentage-of-users-attended-a-contest) |
 | [1811-fix-names-in-a-table](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/1811-fix-names-in-a-table) |
 | [1877-find-followers-count](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/1877-find-followers-count) |
+| [1882-the-number-of-employees-which-report-to-each-employee](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/1882-the-number-of-employees-which-report-to-each-employee) |
 | [2087-confirmation-rate](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/2087-confirmation-rate) |
 <!---LeetCode Topics End-->
