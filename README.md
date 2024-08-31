@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0176-second-highest-salary](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/0176-second-highest-salary) |
 | [0196-delete-duplicate-emails](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/0196-delete-duplicate-emails) |
+| [0570-managers-with-at-least-5-direct-reports](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/0570-managers-with-at-least-5-direct-reports) |
 | [0596-classes-more-than-5-students](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/0596-classes-more-than-5-students) |
 | [0619-biggest-single-number](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/0619-biggest-single-number) |
 | [0620-not-boring-movies](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/0620-not-boring-movies) |
