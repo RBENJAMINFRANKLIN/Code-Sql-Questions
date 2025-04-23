@@ -1,9 +1,6 @@
 /* Write your PL/SQL query statement below */
-SELECT R.CONTEST_ID,
-ROUND(((COUNT(R.CONTEST_ID)/(SELECT COUNT(*) FROM USERS))*100),2) AS PERCENTAGE
-FROM USERS U
-JOIN
-REGISTER R ON
-U.USER_ID =R.USER_ID 
-GROUP BY R.CONTEST_ID
-ORDER BY PERCENTAGE DESC,CONTEST_ID;
+select c.contest_id, round(((count(c.contest_id )/(select count(*) from users))*100),2) percentage from register c join users u on 
+c.user_id = u.user_id
+group by c.contest_id
+order by percentage desc,c.contest_id;
+
