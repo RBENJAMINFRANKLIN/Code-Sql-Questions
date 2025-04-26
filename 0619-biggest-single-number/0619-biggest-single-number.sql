@@ -1,3 +1,3 @@
 /* Write your PL/SQL query statement below */
-SELECT  MAX(num) AS num FROM (SELECT num FROM MyNumbers GROUP BY
-num HAVING COUNT(num) = 1)
+select max(num) num from (
+select  num  from mynumbers group by num having count(num) < 2 );
