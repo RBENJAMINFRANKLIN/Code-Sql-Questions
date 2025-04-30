@@ -1,5 +1,5 @@
+# Write your MySQL query statement below
 
-/* Write your PL/SQL query statement below */
-DELETE FROM PERSON WHERE ID NOT IN (SELECT MIN(ID) FROM PERSON  GROUP BY EMAIL);
-
---delete from Person where id not in(select min(p.id) from Person p group by p.email);
+DELETE P1 FROM PERSON P1, PERSON P2
+WHERE P1.EMAIL = P2.EMAIL AND 
+P1.ID>P2.ID;
