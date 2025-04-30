@@ -1,4 +1,3 @@
-/* Write your PL/SQL query statement below */
-SELECT PATIENT_ID, PATIENT_NAME,
-CONDITIONS FROM PATIENTS WHERE
-CONDITIONS LIKE '% DIAB1%' OR CONDITIONS LIKE 'DIAB1%';
+select patient_id,patient_name, conditions from patients 
+where 
+conditions like 'DIAB1%' OR CONDITIONS LIKE '% DIAB1%';
