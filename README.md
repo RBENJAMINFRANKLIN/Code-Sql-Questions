@@ -23,6 +23,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1327-last-person-to-fit-in-the-bus](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/1327-last-person-to-fit-in-the-bus) |
 | [1390-average-selling-price](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/1390-average-selling-price) |
 | [1415-students-and-examinations](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/1415-students-and-examinations) |
+| [1452-restaurant-growth](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/1452-restaurant-growth) |
 | [1462-list-the-products-ordered-in-a-period](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/1462-list-the-products-ordered-in-a-period) |
 | [1480-movie-rating](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/1480-movie-rating) |
 | [1625-group-sold-products-by-the-date](https://github.com/RBENJAMINFRANKLIN/Code-Sql-Questions/tree/master/1625-group-sold-products-by-the-date) |
