@@ -1,30 +1,10 @@
 # Write your MySQL query statement below
-WITH daily_amount AS (
-  SELECT 
-    visited_on,
-    SUM(amount) AS amount
-  FROM customer
-  GROUP BY visited_on
-),
-rolling_avg AS (
-  SELECT 
-    visited_on,
-    amount,
-    ROUND(
-      SUM(amount) OVER (
-        ORDER BY visited_on
-        ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
-      ), 2
-    ) AS rolling_sum,
-    ROUND(
-      AVG(amount) OVER (
-        ORDER BY visited_on
-        ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
-      ), 2
-    ) AS average_amount
-  FROM daily_amount
-)
-SELECT visited_on, rolling_sum AS amount, average_amount
-FROM rolling_avg
-WHERE visited_on >= DATE_ADD((SELECT MIN(visited_on) FROM customer), INTERVAL 6 DAY)
-ORDER BY visited_on;
+SELECT DISTINCT VISITED_ON,
+AMOUNT,AVERAGE_AMOUNT FROM
+(
+SELECT  VISITED_ON,
+sum(amount) over (order by visited_on RANGE BETWEEN INTERVAL 6 DAY PRECEDING AND CURRENT ROW) AS AMOUNT,
+ROUND(SUM(AMOUNT) OVER (ORDER BY VISITED_ON RANGE BETWEEN INTERVAL 6 DAY PRECEDING AND CURRENT ROW)/7,2) AS AVERAGE_AMOUNT
+FROM CUSTOMER
+) A
+WHERE VISITED_ON >= DATE_ADD((SELECT MIN(VISITED_ON) FROM CUSTOMER),INTERVAL 6 DAY);
