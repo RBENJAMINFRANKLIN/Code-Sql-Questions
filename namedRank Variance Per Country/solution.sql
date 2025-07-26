@@ -1,0 +1,87 @@
+WITH DEC_SUMMARY AS (
+    SELECT
+        U.COUNTRY,
+        SUM(NUMBER_OF_COMMENTS) AS NO_OF_COMMENTS_D,
+        DENSE_RANK()
+        OVER(
+            ORDER BY
+                SUM(NUMBER_OF_COMMENTS) DESC
+        )                       AS DEC_RANK
+    FROM
+             FB_COMMENTS_COUNT C
+        JOIN FB_ACTIVE_USERS U ON C.USER_ID = U.USER_ID
+    WHERE
+            CREATED_AT <= TO_DATE('2019-12-31', 'YYYY-MM-DD')
+        AND CREATED_AT >= TO_DATE('2019-12-01', 'YYYY-MM-DD')
+    GROUP BY
+        U.COUNTRY
+), JAN_SUMMARY AS (
+    SELECT
+        U.COUNTRY,
+        SUM(NUMBER_OF_COMMENTS) AS NO_OF_COMMENTS_J,
+        DENSE_RANK()
+        OVER(
+            ORDER BY
+                SUM(NUMBER_OF_COMMENTS) DESC
+        )                       AS JAN_RANK
+    FROM
+             FB_COMMENTS_COUNT C
+        JOIN FB_ACTIVE_USERS U ON C.USER_ID = U.USER_ID
+    WHERE
+            CREATED_AT <= TO_DATE('2020-01-31', 'YYYY-MM-DD')
+        AND CREATED_AT >= TO_DATE('2020-01-01', 'YYYY-MM-DD')
+    GROUP BY
+        U.COUNTRY
+)
+SELECT
+    J.COUNTRY
+FROM
+    JAN_SUMMARY J
+    LEFT JOIN DEC_SUMMARY D ON J.COUNTRY = D.COUNTRY
+WHERE
+    J.JAN_RANK < D.DEC_RANK
+ORDER BY
+    D.DEC_RANK;WITH DEC_SUMMARY AS (
+    SELECT
+        U.COUNTRY,
+        SUM(NUMBER_OF_COMMENTS) AS NO_OF_COMMENTS_D,
+        DENSE_RANK()
+        OVER(
+            ORDER BY
+                SUM(NUMBER_OF_COMMENTS) DESC
+        )                       AS DEC_RANK
+    FROM
+             FB_COMMENTS_COUNT C
+        JOIN FB_ACTIVE_USERS U ON C.USER_ID = U.USER_ID
+    WHERE
+            CREATED_AT <= TO_DATE('2019-12-31', 'YYYY-MM-DD')
+        AND CREATED_AT >= TO_DATE('2019-12-01', 'YYYY-MM-DD')
+    GROUP BY
+        U.COUNTRY
+), JAN_SUMMARY AS (
+    SELECT
+        U.COUNTRY,
+        SUM(NUMBER_OF_COMMENTS) AS NO_OF_COMMENTS_J,
+        DENSE_RANK()
+        OVER(
+            ORDER BY
+                SUM(NUMBER_OF_COMMENTS) DESC
+        )                       AS JAN_RANK
+    FROM
+             FB_COMMENTS_COUNT C
+        JOIN FB_ACTIVE_USERS U ON C.USER_ID = U.USER_ID
+    WHERE
+            CREATED_AT <= TO_DATE('2020-01-31', 'YYYY-MM-DD')
+        AND CREATED_AT >= TO_DATE('2020-01-01', 'YYYY-MM-DD')
+    GROUP BY
+        U.COUNTRY
+)
+SELECT
+    J.COUNTRY
+FROM
+    JAN_SUMMARY J
+    LEFT JOIN DEC_SUMMARY D ON J.COUNTRY = D.COUNTRY
+WHERE
+    J.JAN_RANK < D.DEC_RANK
+ORDER BY
+    D.DEC_RANK;
